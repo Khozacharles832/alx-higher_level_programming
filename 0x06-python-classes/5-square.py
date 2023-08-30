@@ -53,6 +53,13 @@ class Square:
         else:
             self.__size = value
 
+    def area(self):
+        """ calculates the area of the square
+
+        Returns:
+            The area of the square
+        """
+
         def my_print(self):
             """
                 prints the # char

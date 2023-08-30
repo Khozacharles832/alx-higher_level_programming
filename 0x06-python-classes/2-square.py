@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+""" Defines a class square """
 
 
 class Square:
     """
-    class that defines a square.
+    class that defines the properties of a square by: (based on 1-square.py)
 
     Attributes:
         __size (int): size of the square (default is 0).

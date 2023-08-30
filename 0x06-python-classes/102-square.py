@@ -49,44 +49,44 @@ class Square:
         else:
             self.__size = data
 
-    def __less_than_(self, value):
+    def __lt__(self, other):
         """less than operataor
 
         Returns: True / False
         """
-        return (self.__size < value.__size)
+        return (self.__size < other.__size)
 
-    def __less_eq__(self, value):
+    def __le__(self, other):
         """less than or equal to operator
 
         Returns: True / False
         """
-        return (self.__size <= value.__size)
+        return (self.__size <= other.__size)
 
-    def __equaly__(self, value):
+    def __eq__(self, other):
         """equality operator
 
         Returns: True / False
         """
-        return (self.__size == value.__size)
+        return (self.__size == other.__size)
 
-    def __not_eq__(self, value):
+    def __ne__(self, other):
         """Greater than and equal to
 
         Returns: True / False
         """
-        return (self.__size != value.__size)
+        return (self.__size != other.__size)
 
-    def __grt__(self, value):
+    def __gt__(self, other):
         """Greater than operator
 
         Returns: True / False
         """
-        return (self.__size > value.__size)
+        return (self.__size > other.__size)
 
-    def __grt_eq__(self, value):
+    def __ge__(self, other):
         """Greater than and equal to
 
         Returns: True / False
         """
-        return (self.__size >= value.__size)
+        return (self.__size >= other.__size)

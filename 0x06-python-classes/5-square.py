@@ -60,11 +60,11 @@ class Square:
             The area of the square
         """
 
-        def my_print(self):
-            """
-                prints the # char
-            """
-            if self.__size == 0:
-                print()
-            for i in range(self.__size):
-                print('#' * (self.__size))
+    def my_print(self):
+        """
+            prints the # char
+        """
+        if self.__size == 0:
+            print()
+        for i in range(self.__size):
+            print('#' * (self.__size))

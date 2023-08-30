@@ -33,6 +33,7 @@ class Square:
     def size(self):
         """ Returns the size of a square
         """
+        return (self.__size)
 
     @size.setter
     def size(self, value):

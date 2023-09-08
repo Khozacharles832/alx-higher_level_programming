@@ -1,0 +1,76 @@
+>>> text_indentation("python : test_driven ? development . project ")
+python
+<BLANKLINE>
+test_driven
+<BLANKLINE>
+development
+<BLANKLINE>
+project
+
+>>> text_indentation(" .?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation(" charles")
+Charles
+
+>>> text_indentation(" : ")
+:
+<BLANKLINE>
+
+>>> text_indentation("?Charlie")
+?
+<BLANKLINE>
+Charlie
+
+>>> text_indentation("?\n\n.\n\n:")
+?
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+.
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>>text_indentation("Charles Khoza")
+Charles Khoza
+
+>>> text_indentation(" ")
+
+
+>>> text_indentation("Charles: Khoza")
+Charles:
+<BLANKLINE>
+Khoza
+
+>>> text_indentation(" ? : : ")
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation("\n")
+<BLANKLINE>
+
+>>> text_indentation("\n\n")
+<BLANKLINE>
+<BLANKLINE>

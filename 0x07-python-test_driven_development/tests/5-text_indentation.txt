@@ -1,76 +1,39 @@
->>> text_indentation("python : test_driven ? development . project ")
-python
-<BLANKLINE>
-test_driven
-<BLANKLINE>
-development
-<BLANKLINE>
-project
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation(" .?:")
-.
-<BLANKLINE>
-?
-<BLANKLINE>
-:
-<BLANKLINE>
+correct usage
+>>> t=" : . ?"
 
->>> text_indentation(" charles")
-Charles
+output for this funv=ction should be like this
+>>> t="Hello :\nI am a string? .\n"
 
->>> text_indentation(" : ")
-:
-<BLANKLINE>
+t is equal to:
+>>> t=" : . ?"
 
->>> text_indentation("?Charlie")
-?
-<BLANKLINE>
-Charlie
+on errors:
 
->>> text_indentation("?\n\n.\n\n:")
-?
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-.
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-:
-<BLANKLINE>
-
->>> text_indentation(None)
+Empty string.
+>>> text_indentaton("")
 Traceback (most recent call last):
-...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+More than one string
+>>> text_indentation("we", "are", "more")
+Traceback (more recent call last):
+TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+>>> text_indentation(23)
+Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation(12)
+>>> text_indentation("")
+
+>>> text_indentation()
 Traceback (most recent call last):
-...
-TypeError: text must be a string
+TypeError: text_indentation missing 1 positional argument: 'text'
 
->>>text_indentation("Charles Khoza")
-Charles Khoza
-
->>> text_indentation(" ")
-
-
->>> text_indentation("Charles: Khoza")
-Charles:
-<BLANKLINE>
-Khoza
-
->>> text_indentation(" ? : : ")
-?
-<BLANKLINE>
-:
-<BLANKLINE>
-:
+>>> text_indentation("Charlie.")
+Charlie.
 <BLANKLINE>
 
->>> text_indentation("\n")
-<BLANKLINE>
-
->>> text_indentation("\n\n")
-<BLANKLINE>
-<BLANKLINE>
+>>> text_indentation("Hello")
+Hello

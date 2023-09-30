@@ -1,14 +1,20 @@
 #!/usr/bin/python3
+"""A text indentation function"""
+
+
 def text_indentation(text):
+    """Indents text strings"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for delimiter in "?:.":
-        words = text.split(delimiter)
-        text = (delimiter + "\n\n").join([index.strip() for index in words])
+    result = ""
+    inside_space = False
 
-    print(text)
-
-    if __name__ == "__main__":
-        import doctest
-        doctest.testfile("tests/5-text_indentation.txt")
+    for char in text:
+        if char in (".", "?", ":"):
+            result += char + "\n\n"
+            inside_space = True
+        elif char == " " and inside_space:
+            inside_space = False
+        result += char
+    print(result)

@@ -6,8 +6,8 @@
 def append_write(filename="", text=""):
     """Appends text at the end of a file"""
     try:
-        with open(filename, 'a', encoding='utf-8') as thefile:
-            num_chars = thefile.write(text)
+        with open(filename, 'a', encoding='utf-8') as file:
+            num_chars = file.write(text)
         return (num_chars)
     except Exception as e:
         print(f"Error appending to file: {e}")

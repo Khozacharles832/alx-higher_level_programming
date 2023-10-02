@@ -15,7 +15,7 @@ True
 >>> my_list.append(0)
 >>> my_list.append(7)
 >>> my_list.print_sorted()
-[-3, 0, 7, 4, 3, 7]
+[-3, 0, 7]
 
 >>> my_list.clear()
 >>> my_list.append(5)
@@ -24,9 +24,9 @@ True
 >>> my_list.print_sorted()
 [2, 5, 5]
 
->>> my_list.append(77777777)
+>>> my_list.append(777)
 >>> my_list.print_sorted()
-[2, 5, 5, 77777777]
+[2, 5, 5, 777]
 
 >>> my_list.append(None)
 Traceback (most recent call last):
@@ -35,3 +35,5 @@ TypeError: unorderable types: NoneTypes < int()
 >>> my_list.append(NULL)
 Traceback (most recent call last):
 NameError: name 'NULL' is not defined
+
+

@@ -4,10 +4,10 @@ Defines with class BaseGeometry
 """
 
 
-class BaseGeometry():
+class BaseGeometry:
     """BaseGeometry class"""
 
-    @classmethod
+    
     def area(self):
         """calculate area"""
 

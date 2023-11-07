@@ -1,6 +1,0 @@
-ERROR!
-file "<string>", line 6
-	11 = [1, 2, 3]
-	^^
-SyntaxError: can't assign to literal here. maybe you meant '=='
-	instead of '='?

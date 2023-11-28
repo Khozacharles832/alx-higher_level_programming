@@ -1,0 +1,47 @@
+The matrix_divided module test file
+===================================
+
+Using interactive testing
+----------------------------
+
+ >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test for item sizes in the matrix:
+ >>> matrix = [[3, 5, 5], [7, 3], [5]]
+ >>> div = 6
+ >>> matrix_divided(matrix, div)
+ Traceback (most recent call last):
+ 	...
+ TypeError: Each element in the matrix must be of the same size
+
+Test that div must always be a number(integer/float):
+ >>> matrix = [[4, 5, 6], [9, 8, 6]]
+ >>> div = 'one'
+ >>> matrix_divided(matrix, div)
+ Traceback (most recent call last):
+ 	...
+ TypeError: div must be a number
+
+Test for division bt zero:
+ >>> matrix = [[4, 5, 6], [5, 4, 3]]
+ >>> div = 0
+ >>> matrix_divided(matrix, div)
+ Traceback (most recent call last):
+ 	...
+ ZeroDivisionError: division by zero
+
+Matrix must be a matrix (list of lists).:
+ >>> natrix = [[4, 5, 6], 6, [5, 4, 3]]
+ >>> div = 9
+ >>> matrix_divided(matrix, div)
+ Traceback (most recent call last):
+ 	...
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+One passing test:
+ >>> matrix = [[2, 3, 4], [5, 6, 7], [4, 6, 2]]
+ >>> div = 2
+ >>> matrix_divided(matrix, div)
+ [[1.0, 1.5, 2.0], [2.5, 3.0, 3.5], [2.0, 3.0, 1.0]]
+
+The end:

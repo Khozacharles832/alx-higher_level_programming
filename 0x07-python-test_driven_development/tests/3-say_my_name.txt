@@ -1,0 +1,33 @@
+The ``say_my_name`` module test file
+====================================
+
+Doctests using interactive testing
+-----------------------------------
+ >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+ >>> say_my_name('Charles', 'Khoza')
+ My name is Charles Khoza
+ >>> say_my_name(5, 'Khoza')
+ Traceback (most recent call last):
+ 	...
+ TypeError: first_name must be a string
+ 
+ >>> say_my_name('Charles', 5)
+ Traceback (most recent call last):
+ 	...
+ TypeError: last_name must be a string
+
+ >>> say_my_name(charles, 'Khoza')
+ Traceback (most recent call last):
+ 	...
+ NameError: name 'charles' is not defined
+
+ >>> say_my_name('Charlie')
+ My name is Charlie
+
+ >>> say_my_name()
+ Traceback (most recent call last):
+ 	...
+ TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+

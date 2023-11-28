@@ -1,0 +1,21 @@
+The ``text_indentation`` module
+===============================
+
+ >>> text_indentation = __import__('5-text_indentation.txt').text_indentation
+ >>> text_indentation(' .nope? it. was not me: pe.')
+ .
+ <BLANKLINE>
+ nope?
+ <BLANKLINE>
+ it.
+ <BLANKLINE>
+ was not me:
+ <BLANKLINE>
+ pe.
+ <BLANKLINE>
+ >>> text_indentation(5)
+ Traceback (most recent call last):
+ 	...
+ TypeError: must be a string
+ >>> text_indentation('3')
+ 3

@@ -5,6 +5,8 @@ rectangle
 
 class Rectangle:
     '''A Rectangle with class with attributes'''
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -37,6 +39,30 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        if self.__width is 0 or self.__height is 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.__height)
+
+    def _draw_rectangle(self):
+        '''Draw a rectangle with the `#` character'''
+        string = ''
+        for row in range(self.__height):
+            for col in range(self.__width):
+                string += '#'
+            if self.__width != 0 and row < (self.__height - 1):
+                string += '\n'
+        return string
+
+    def __str__(self):
+        '''unofficial representation of the object'''
+        return self._draw_rectangle()
+
+    def __repr__(self):
+        '''official representation of string'''
+        return 'Rectangle({:d}, {:d}'.format(self.__width, self.__height)
+
+    @staticmethod
+    def __del__(cls):
+        '''prints a message upon deletion of instance'''
+        cls.number_of_instances -= 1
+        print('Bye rectangle...')

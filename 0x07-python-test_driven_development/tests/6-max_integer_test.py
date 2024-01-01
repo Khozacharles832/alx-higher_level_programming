@@ -1,43 +1,39 @@
 #!/usr/bin/python3
-'''
-The max integer unittest module
-'''
-
+""" Here is a short script to 
+test max_integer([..])"""
 
 import unittest
-
 max_integer = __import__('6-max_integer').max_integer
 
+# A testcase is created by subclassing unittest.TestCase
 class TestMaxInteger(unittest.TestCase):
-    '''Unittest for the max-integer module'''
-    def setup(self):
-        self.ordered_list = [1, 2, 3, 4]
-        self.unordered_list = [1, 3, 4, 2]
 
-    def test_max(self):
-        self.assertEqual(max_integer(self.ordered_list),
-                max_integer(self.unordered_list))
+    # All tests you make must be passable by the function below
+    # The unittest module provides tools for constructing and running tests
+    # test_ means it's a method
+    def test_upper(self):
+        self.assertEqual(max_integer([6, 7, 8, 9]), 9)
 
-    def test_string(self):
-        self.assertEqual(max_integer('string'), 't')
-
-    def test_nothing(self):
-        self.assertEqual(max_integer(), None)
-
-    def test_empty_list(self):
+    def test_none(self):
         self.assertEqual(max_integer([]), None)
 
-    def test_list_of_negatives(self):
-        self.assertEqual(max_integer([-2, -5, -7, -8]), -2)
+    def test_one(self):
+        self.assertEqual(max_integer([2]), 2)
 
-    def test_key_error(self):
-        with self.assertRaises(KeyError):
-            max_integer({5 : 6})
+    def test_one_neg(self):
+        self.assertEqual(max_integer([-10]), -10)
 
-    def test_type_error_too_many_args(self):
-        with self.assertRaises(TypeError):
-            max_integer('tuple', 'ofstrings')
+    def test_neg(self):
+        self.assertEqual(max_integer([1, -2, -3, -4]), 1)
 
-    def test_type_error_on_incoparable_list_items(self):
-        with self.assertRaises(TypeError):
-            max_integer([[], {}])
+    def test_middle(self):
+        self.assertEqual(max_integer([1, 3, 8, 2, 6]), 8)
+
+if __name__ == '__main__':
+    unittest.main()
+
+# The crux of each test is a call to assertEqual() to check 
+# for an expected result; assertTrue() or assertFalse() to verify a condition; 
+# or assertRaises() to verify that a specific exception gets raised. 
+# These methods are used instead of the assert statement so 
+# the test runner can accumulate all test results and produce a report.
